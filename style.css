@@ -1,87 +1,110 @@
 body {
     background-color: #d1d2d4;
-    font-family: tahoma;
+    font-family: "Tahoma", sans-serif;
     font-size: 12px;
     padding: 0px;
     margin: 0px;
     min-width: 1135px;
 }
-/* шапка */
-
 header {
     box-shadow: 0px 0px 50px 10px #babebf;
     line-height: 0;
     border: 0px;
+
 }
 .header-image {
     display: flex;
-}
-.header-middle {
     width: 100%;
-    background-image: url("images_header/header-middle.jpg");
-    background-repeat: repeat-x;
 }
-.logo {
+.left-header {
+    display: flex;
+    min-width: 200px;
+    width: 900px;
+}
+.left-bush {
+    min-width: 100px;
+    height: 456px;
+    background: url("images/header/left_bush.jpg") no-repeat;
+}
+.left-backdrop {
+    width: 100%;
+    background: url("images/header/backdrop.jpg") repeat-x;
+}
+.header-main {
+    display: block;
     width: 327px;
+}
+.wire {
+    width: 328px;
+    height: 65px;
+    background: url("images/header/wire.jpg") no-repeat;
+}
+.lights {
+    width: 328px;
+    height: 79px;
+    background: url("images/header/lights.jpg") no-repeat;
 }
 /* кнопки на шапке */
 
-.header_08 {
+.buttons {
     width: 328px;
     height: 16px;
-    background-image: url("images_header/header_08_01.jpg");
-    background-repeat: repeat-x;
+    background: url("images/header/buttons-background.jpg") repeat-x;
     padding-left: 45px;
+    box-sizing: border-box;
 }
-.header_08 a {
+.buttons a {
     margin: 0px 33px;
+    text-decoration: none;
 }
-.header_08 img:hover {
+.buttons img:hover {
     box-shadow: 0px 0px 3px 5px #aac738;
 }
 /* кнопки на шапке закончились */
 
-.header-middle1 {
-    width: 100%;
-    min-width: 100px;
-    max-width: 400px;
-    background-image: url("images_header/header-middle.jpg");
-    background-repeat: repeat-x;
+.lights-reflection {
+    width: 328px;
+    height: 152px;
+    background: url("images/header/lights-reflection.jpg") no-repeat;
 }
-.header2 {
-    width: 258px;
+.right-header {
+    display: flex;
+    width: 100%;
+}
+.right-backdrop {
+    width: 100%;
+    background: url("images/header/backdrop.jpg") repeat-x;
+}
+.right-bush {
+    min-width: 236px;
+    height: 456px;
+    background: url("images/header/right_bush.jpg") no-repeat;
 }
 /* главное меню */
-
-.header-main-menu div {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 70%;
-    height: 0px;
+.main-menu {
+    margin-top: 0;
+    padding-left: 30px;
+    margin-bottom: 30px;
 }
 .main-menu > li {
-    text-transform: uppercase;
+    position: relative;
+    height: 0;
     display: inline-block;
     margin-right: 10px;
-    padding: 2px;
-    position: relative;
-    margin-top: 25px;
+    padding: 0 3px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
 }
 .main-menu a {
+    padding: 2px;
     text-decoration: none;
-    border-bottom: 1px dashed #000000;
+    border-bottom: 2px dashed #798b63;
     color: #ffffff;
     font-size: 13px;
-    padding: 3px;
 }
-.data {
-    color: #ffffff;
-}
-.main-menu {
-    margin-top: 0px;
-    padding-left: 20px;
-    margin-bottom: 30px;
+.main-menu a:hover {
+    background-color: #3d6906;
 }
 .main-menu li ul {
     position: absolute;
@@ -96,23 +119,21 @@ header {
     -moz-transition: max-height 0.2s linear;
     transition: max-height 0.2s linear;
 }
-.main-menu .podmenu a {
+.main-menu .submenu a {
     border: 1px solid #f3f3f5;
     background-color: #939999;
     padding-top: 15px;
     height: 20px;
     display: block;
 }
-.main-menu a:hover {
-    background-color: #3d6906;
-}
-.main-menu li:hover .podmenu {
+.main-menu li:hover .submenu {
     display: block;
     max-height: 300px;
 }
-.podmenu a:hover {
+.submenu a:hover {
     background-color: #aec94a;
 }
+
 /* правый блок с новостями */
 
 .right-block div {
@@ -191,7 +212,7 @@ header {
 
 .path1 {
     padding-left: 20px;
-    padding-top: 80px;
+    padding-top: 30px;
 }
 .path2 {
     padding-left: 20px;
@@ -382,6 +403,9 @@ legend {
     border-top: none;
     border-right: none;
     transform: rotate(-45deg);
+}
+.data {
+    color: #ffffff;
 }
 .submit-button {
     color: #ffffff;
