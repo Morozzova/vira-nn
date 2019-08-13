@@ -4,7 +4,6 @@ body {
     font-size: 12px;
     padding: 0px;
     margin: 0px;
-    min-width: 1135px;
 }
 header {
     box-shadow: 0px 0px 50px 10px #babebf;
@@ -14,6 +13,7 @@ header {
 .header-image {
     display: flex;
     width: 100%;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
 }
 .left-header {
     display: flex;
@@ -104,7 +104,7 @@ header {
     font-size: 13px;
 }
 .main-menu a:hover {
-    background-color: #3d6906;
+    background-color: #4c6828;
 }
 .main-menu li ul {
     position: absolute;
@@ -133,7 +133,238 @@ header {
 .submenu a:hover {
     background-color: #aec94a;
 }
-/* правый блок с новостями */
+/* флексбоксы */
+
+main {
+    display: flex;
+    flex-direction: row;
+    min-width: 1000px;
+    width: 100%;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    margin-bottom: 60px;
+}
+.main-container > section {
+    padding-left: 60px;
+    margin: 34px;
+    margin-right: 25px;
+}
+.breadcrumbs {
+    display: inline-block;
+    margin-left: 34px;
+    padding-left: 0;
+    list-style-type: none;
+    color: #000000;
+    font-size: 11px;
+}
+.breadcrumbs li {
+    display: inline-block;
+}
+.breadcrumbs a {
+    color: #4e7c2f;
+}
+.main-container .title-wrapper {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.title {
+    display: inline-block;
+    margin: 0px;
+    color: #ffffff;
+    font-size: 27px;
+    margin-left: 34px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.title span {
+    background-color: #4c6828;
+    padding: 2px 6px;
+}
+.print {
+    display: inline-block;
+    margin-left: 5px;
+}
+.print a {
+    color: #4e7c2f;
+}
+/* информация о Kone */
+
+.kone-description {
+    padding-top: 47px;
+    background-color: #e8e9eb;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.kone-description p {
+    margin-top: 0;
+}
+.kone-description p:last-child {
+    padding-bottom: 27px;
+}
+.kone-image {
+    width: 255px;
+    height: 129px;
+    float: right;
+    padding: 0px 62px 46px 60px;
+}
+/* блок Пассажирские лифты */
+
+.kone-passenger {
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+}
+h2 {
+    margin-bottom: 50px;
+    margin-top: 0px;
+    font-size: 24px;
+}
+.passenger-image-1 {
+    width: 250px;
+    height: 366px;
+    margin-left: 10px;
+    margin-right: 0px;
+    float: right;
+    padding: 0px 0px 0px 10px;
+}
+.passenger-image-2 {
+    width: 250px;
+    height: 366px;
+    margin-left: 50px;
+    margin-right: 0px;
+    float: right;
+    padding: 0px 0px 0px 10px;
+}
+/* блок Скоростные лифты */
+
+.main-container .kone-speed {
+    padding-left: 0;
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+}
+.speed-image-1 {
+    height: 380px;
+    margin-right: 22px;
+    float: left;
+}
+.speed-image-2 {
+    height: 380px;
+    margin-right: 50px;
+    float: left;
+}
+/* блок Медицинский */
+
+.main-container .kone-med {
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+    margin-bottom: 53px;
+}
+.med-image {
+    width: 540px;
+    height: 380px;
+    margin-left: 50px;
+    float: right;
+}
+/* форма обратной связи */
+
+.main-container .form-consult {
+    background-color: #4c6828;
+    color: #ffffff;
+    padding-left: 0;
+    text-align: center;
+}
+form {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+form legend {
+    margin: 0 auto;
+    margin-top: 28px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+.form-consult fieldset {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px;
+    border: none;
+}
+.left-form {
+    width: 447px;
+    margin-right: 10px;
+}
+.myinput {
+    width: 447px;
+    height: 34px;
+    margin-bottom: 9px;
+    background-color: #e8e9eb;
+    padding-left: 15px;
+    border: none;
+    box-shadow: 0px 2px 0px 0px rgba(110, 168, 29, 0.75);
+    box-sizing: border-box;
+}
+.mytextarea {
+    margin-left: 0px;
+    width: 548px;
+    height: 120px;
+    background-color: #eaebed;
+    padding-left: 14px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #eaebed;
+    box-shadow: 0px 2px 0px 0px rgba(110, 168, 29, 0.75);
+    box-sizing: border-box;
+}
+.check {
+    display: none;
+}
+.check + label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 15px;
+}
+.check + label::before {
+    position: absolute;
+    right: 511px;
+    top: -17px;
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff;
+    border: none;
+    content: "";
+    margin-top: 15px;
+}
+.check:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: -21px;
+    width: 11px;
+    height: 6px;
+    background: none;
+    border: 2px solid #659820;
+    border-top: none;
+    border-right: none;
+    transform: rotate(-45deg);
+}
+.data {
+    color: #ffffff;
+}
+.submit-button {
+    color: #ffffff;
+    background-color: #6ea81d;
+    border: #ffffff solid 1px;
+    font-weight: bold;
+    font-size: 14px;
+    width: 169px;
+    height: 37px;
+    margin-top: 30px;
+    margin-bottom: 28px;
+}
+/* сайдбар с новостями */
 
 .sidebar {
     width: 230px;
@@ -222,230 +453,8 @@ header {
     font-size: 15px;
     color: #69a41d;
 }
-/* флексбоксы */
-
-.main-container {
-    display: flex;
-    flex-direction: row-reverse;
-}
-.flex-elements {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-.flex-elements > div {
-    padding: 30px 0px 0px 0px;
-    margin: 20px;
-    margin-right: 25px;
-}
-/* путь */
-
-.path1 {
-    padding-left: 20px;
-    padding-top: 30px;
-}
-.path2 {
-    padding-left: 20px;
-}
-.path a {
-    color: #3d6906;
-}
-.lifts {
-    display: inline;
-    width: 143px;
-    height: 20px;
-    margin: 6px;
-    color: #ffffff;
-    background-color: #3d6906;
-    font-size: 27px;
-    padding: 3px;
-    text-transform: uppercase;
-}
-.path1 {
-    font-size: 11px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-}
-.path2 div {
-    display: inline-block;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-h1 {
-    margin-bottom: 50px;
-    margin-top: 0px;
-    font-size: 24px;
-}
-/* информация о Kone */
-
-.kone-main {
-    background-color: #e8e9eb;
-    box-shadow: 0px 0px 15px 10px #c8c9cb;
-}
-.kone-info {
-    padding: 20px 0px 40px 60px;
-    margin-top: 0px;
-}
-.kone-main div {
-    border-bottom: 0px solid #000000;
-}
-.kone-info-1p {
-    margin-top: 0px;
-}
-.kone-image img {
-    width: 255px;
-    float: right;
-    padding: 20px 62px 40px 60px;
-}
-/* блок Пассажирские лифты */
-
-.kone-passenger {
-    margin-right: 0px;
-    padding-right: 0px;
-    border-bottom: 1px solid #000000;
-}
-.passenger-info {
-    padding: 0px 0px 40px 50px;
-    font-size: 14px;
-}
-.lift4 {
-    width: 250px;
-    margin-left: 10px;
-    margin-right: 0px;
-    float: right;
-    padding: 0px 0px 0px 10px;
-}
-.lift3 {
-    width: 250px;
-    margin-left: 50px;
-    margin-right: 0px;
-    float: right;
-    padding: 0px 0px 0px 10px;
-}
-/* блок Скоростные лифты */
-
-.kone-speed {
-    border-bottom: 1px solid #000000;
-}
-.lift2 {
-    height: 380px;
-    margin-right: 22px;
-    float: left;
-}
-.lift1 {
-    height: 380px;
-    margin-right: 50px;
-    float: left;
-}
-.speed-info {
-    padding: 0px 0px 40px 50px;
-    font-size: 14px;
-}
-/* блок Медицинский */
-
-.kone-med {
-    border-bottom: 1px solid #000000;
-}
-.med-info {
-    padding: 0px 50px 30px 60px;
-    font-size: 14px;
-}
-.med-image img {
-    width: 540px;
-    margin-left: 50px;
-    float: right;
-}
-/* форма обратной связи */
-
-.consult-form {
-    padding: 20px;
-    background-color: #4c6828;
-    text-align: center;
-    margin-right: 45px;
-    padding-bottom: 0px;
-    color: #ffffff;
-    margin-top: 20px;
-}
-.formform {
-    padding: 0px;
-    width: 100%;
-}
-fieldset {
-    border: none;
-}
-legend {
-    font-size: 24px;
-    margin: 0px;
-}
-.consult-form fieldset {
-    display: inline-block;
-    vertical-align: top;
-    padding: 0px;
-    margin-top: 20px;
-}
-.form1 {
-    margin-right: 10px;
-}
-.myinput {
-    width: 445px;
-    height: 30px;
-    margin-bottom: 9px;
-    background-color: #eaebed;
-    padding-left: 15px;
-}
-.mytextarea {
-    margin-left: 0px;
-    width: 547px;
-    height: 115px;
-    background-color: #eaebed;
-    padding-left: 15px;
-    padding-top: 10px;
-    margin-bottom: 20px;
-}
-.check {
-    margin: 15px 0px 15px 0px;
-    display: none;
-}
-.check + label {
-    position: relative;
-    cursor: pointer;
-}
-.check + label::before {
-    position: absolute;
-    right: 510px;
-    top: -17px;
-    width: 18px;
-    height: 18px;
-    background-color: #ffffff;
-    border: none;
-    content: "";
-    margin-top: 15px;
-}
-.check:checked + label::after {
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: -35px;
-    width: 11px;
-    height: 6px;
-    background: none;
-    border: 2px solid #659820;
-    border-top: none;
-    border-right: none;
-    transform: rotate(-45deg);
-}
-.data {
-    color: #ffffff;
-}
-.submit-button {
-    color: #ffffff;
-    background-color: #6ea81d;
-    border: #ffffff solid 1px;
-    font-weight: bold;
-    font-size: 14px;
-    width: 165px;
-    height: 35px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+@media screen and (max-width: 1370px) {
+    form {
+        max-width: 548px;
+    }
 }
