@@ -200,6 +200,7 @@ main {
 }
 .kone-description p {
     margin-top: 0;
+	padding-right: 40px;
 }
 .kone-description p:last-child {
     padding-bottom: 27px;
@@ -348,7 +349,9 @@ form legend {
     border: 2px solid #659820;
     border-top: none;
     border-right: none;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 .data {
     color: #ffffff;
@@ -376,29 +379,26 @@ form legend {
     background-color: #4c6828;
     font-size: 27px;
     padding: 6px;
-    height: 53px;
+    height: 65px;
     width: 230px;
     line-height: 1;
     text-transform: uppercase;
 }
-.sidebar-header::after,
-.sidebar-footer::after {
+.sidebar-header {
+	padding-right: 30px;
+	box-sizing: border-box;
+}
+.arrow {
     position: relative;
     content: "";
     max-width: 0;
     height: 0;
     margin-top: 0px;
     margin-left: 205px;
-    border: 10px solid;
+    border: 7px solid;
     border-color: transparent;
     border-top-color: #3d6906;
     border-bottom: 0;
-}
-.sidebar-header::after {
-    top: 15px;
-}
-.sidebar-footer::after {
-    top: 27px;
 }
 .news {
     padding-left: 0;
@@ -423,15 +423,17 @@ form legend {
     position: relative;
     text-align: right;
     margin-top: -5px;
+	
 }
 .news-archive a::before {
     position: absolute;
     top: 1px;
-    left: 130px;
+    right: 94px;
     width: 8px;
-    height: 311px;
+    height: 11px;
     content: "";
     background: url("images/news_archive.gif") no-repeat;
+	
 }
 .news-of-date a,
 .news-archive a {
@@ -443,6 +445,7 @@ form legend {
 }
 .sidebar-footer {
     margin-top: 50px;
+	box-sizing: border-box;
 }
 .sidebar-footer p {
     margin: 0;
