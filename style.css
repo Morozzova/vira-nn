@@ -200,7 +200,7 @@ main {
 }
 .kone-description p {
     margin-top: 0;
-	padding-right: 40px;
+    padding-right: 40px;
 }
 .kone-description p:last-child {
     padding-bottom: 27px;
@@ -329,7 +329,7 @@ form legend {
 }
 .check + label::before {
     position: absolute;
-    right: 511px;
+    left: -23px;
     top: -17px;
     width: 18px;
     height: 18px;
@@ -375,6 +375,7 @@ form legend {
 }
 .sidebar-header,
 .sidebar-footer {
+    position: relative;
     color: #ffffff;
     background-color: #4c6828;
     font-size: 27px;
@@ -385,11 +386,12 @@ form legend {
     text-transform: uppercase;
 }
 .sidebar-header {
-	padding-right: 30px;
-	box-sizing: border-box;
+    padding-right: 30px;
+    box-sizing: border-box;
 }
-.arrow {
-    position: relative;
+.sidebar-header::after,
+.sidebar-footer::after {
+    position: absolute;
     content: "";
     max-width: 0;
     height: 0;
@@ -399,6 +401,14 @@ form legend {
     border-color: transparent;
     border-top-color: #3d6906;
     border-bottom: 0;
+}
+.sidebar-header::after {
+    right: 15px;
+    top: 65px;
+}
+.sidebar-footer::after {
+    right: 15px;
+    top: 65px;
 }
 .news {
     padding-left: 0;
@@ -423,7 +433,6 @@ form legend {
     position: relative;
     text-align: right;
     margin-top: -5px;
-	
 }
 .news-archive a::before {
     position: absolute;
@@ -433,7 +442,6 @@ form legend {
     height: 11px;
     content: "";
     background: url("images/news_archive.gif") no-repeat;
-	
 }
 .news-of-date a,
 .news-archive a {
@@ -445,7 +453,7 @@ form legend {
 }
 .sidebar-footer {
     margin-top: 50px;
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 .sidebar-footer p {
     margin: 0;
