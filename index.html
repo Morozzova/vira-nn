@@ -43,25 +43,25 @@
                 <div class="right-bush"></div>
             </section>
         </section>
-        <nav class="header-main-menu">
+        <nav>
             <ul class="main-menu">
                 <li><a href="#">О компании</a>
                     <ul class="submenu">
-                        <li><a href="#">История компании</a>
+                        <li><a href="#" tabindex="-1">История компании</a>
                         </li>
-                        <li><a href="#">Лицензии</a>
+                        <li><a href="#" tabindex="-1">Лицензии</a>
                         </li>
-                        <li><a href="#">Отзывы и благодарственные письма</a>
+                        <li><a href="#" tabindex="-1">Отзывы и благодарственные письма</a>
                         </li>
                     </ul>
                 </li>
                 <li><a href="#">Каталог</a>
                     <ul class="submenu">
-                        <li><a href="#">Лифтовое оборудование</a>
+                        <li><a href="#" tabindex="-1">Лифтовое оборудование</a>
                         </li>
-                        <li><a href="#">Эскалаторы и траволаторы</a>
+                        <li><a href="#" tabindex="-1">Эскалаторы и траволаторы</a>
                         </li>
-                        <li><a href="#">Подъемники горизонтальные и вертикальные</a>
+                        <li><a href="#" tabindex="-1">Подъемники горизонтальные и вертикальные</a>
                         </li>
                     </ul>
                 </li>
@@ -94,6 +94,7 @@
             </div>
             <section class="kone-description">
                 <img class="kone-image" src="images/kone.jpg" width="255" height="129" alt="KONE">
+                <h2 class="visually-hidden">О фирме KONE</h2>
                 <p>Производственный кооператив «Вира» поставляет в Россию лифтовое оборудование производства фирмы KONE (КОНЕ) напрямую по ценам производителя, осуществляет качественный монтаж, пуско-наладку, ввод в эксплуатацию и обеспечивает дальнейшее техническое обслуживание.</p>
                 <p>KONE (КОНЕ) — финская компания, являющаяся мировым лидером по производству лифтового оборудования, предлагает инновационные решения в области дизайна, модернизации, монтажа, а также в сфере обслуживания полуавтоматических и автоматических дверей. Корпорация KONE (Коне) успешно ведет бизнес в более чем 100 странах и является первой и единственной компанией среди иностранных поставщиков лифтового оборудования, работающей в странах СНГ, а также в России уже более 70 лет.</p>
                 <p>Производимое финской компанией KONE (Kоне) лифты проходят все виды проверок и контроля перед установкой и началом эксплуатации. Оборудование KONE полностью соответствует всем международным стандартам и требованиям.
@@ -130,16 +131,16 @@
                 <form method="post">
                     <legend>Получите бесплатную консультацию!</legend>
                     <fieldset class="left-form">
-                        <input type="text" name="name" placeholder="Ваше имя" class="myinput">
+                        <label for="name" class="visually-hidden">Введите имя</label><input type="text" name="name" id="name" placeholder="Ваше имя" class="left-form-input">
 
-                        <input type="text" name="phone" placeholder="Телефон" class="myinput">
+                        <label for="phone" class="visually-hidden">Введите телефон</label><input type="text" name="phone" id="phone" placeholder="Телефон" class="left-form-input">
 
-                        <input type="text" name="e-mail" placeholder="E-mail" class="myinput">
+                        <label for="e-mail" class="visually-hidden">Введите e-mail</label><input type="text" name="e-mail" id="e-mail" placeholder="E-mail" class="left-form-input">
                     </fieldset>
                     <fieldset class="right-form">
-                        <textarea name="question" class="mytextarea" placeholder="Задайте интересующий Вас вопрос"></textarea>
+                         <label for="question" class="visually-hidden">Задайте интересующий Вас вопрос</label><textarea name="question" id="question" class="right-form-textarea" placeholder="Задайте интересующий Вас вопрос"></textarea>
                         <br>
-                        <input type="checkbox" name="check" id="check" class="check" checked>
+                        <input type="checkbox" name="check" id="check" class="check" checked tabindex="0">
                         <label for="check" class="stylized-checkbox">Нажимая кнопку "Отправить", я даю согласие на <a href="#" class="data">обработку моих персональных данных</a>
                         </label>
                     </fieldset>
@@ -149,7 +150,7 @@
 
         </section>
         <section class="sidebar">
-            <header class="sidebar-header">НАШИ НОВОСТИ</header>
+            <header class="sidebar-header"><h2>НАШИ НОВОСТИ</h2></header>
             <ul class="news">
                 <li>
                     <p><span class="news-date">27.04.</span><span class="news-year">2017</span>

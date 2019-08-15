@@ -5,17 +5,36 @@ body {
     padding: 0px;
     margin: 0px;
 }
+
+.visually-hidden {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 header {
-    box-shadow: 0px 0px 50px 10px #babebf;
+    -webkit-box-shadow: 0px 0px 50px 10px #babebf;
+            box-shadow: 0px 0px 50px 10px #babebf;
     line-height: 0;
     border: 0px;
 }
 .header-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
 }
 .left-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     min-width: 200px;
     width: 900px;
@@ -50,14 +69,17 @@ header {
     height: 16px;
     background: url("images/header/buttons-background.jpg") repeat-x;
     padding-left: 45px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .buttons a {
     margin: 0px 33px;
     text-decoration: none;
 }
-.buttons img:hover {
-    box-shadow: 0px 0px 3px 5px #aac738;
+.buttons img:hover,
+.buttons a:focus {
+    -webkit-box-shadow: 0px 0px 3px 5px #aac738;
+            box-shadow: 0px 0px 3px 5px #aac738;
 }
 /* кнопки на шапке закончились */
 
@@ -67,6 +89,8 @@ header {
     background: url("images/header/lights-reflection.jpg") no-repeat;
 }
 .right-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
 }
@@ -102,8 +126,10 @@ header {
     border-bottom: 2px dashed #798b63;
     color: #ffffff;
     font-size: 13px;
+
 }
-.main-menu a:hover {
+.main-menu a:hover,
+.main-menu a:focus {
     background-color: #4c6828;
 }
 .main-menu li ul {
@@ -116,8 +142,9 @@ header {
     max-height: 0px;
     overflow: hidden;
     -webkit-transition: max-height 0.2s linear;
-    -moz-transition: max-height 0.2s linear;
-    transition: max-height 0.2s linear;
+            -o-transition: max-height 0.2s linear;
+            transition: max-height 0.2s linear;
+
 }
 .main-menu .submenu a {
     border: 1px solid #f3f3f5;
@@ -130,20 +157,31 @@ header {
     display: block;
     max-height: 300px;
 }
-.submenu a:hover {
+.submenu a:hover,
+.submenu a:focus {
     background-color: #aec94a;
 }
 /* флексбоксы */
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     min-width: 1000px;
     width: 100%;
 }
 .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-top: 5px;
     margin-bottom: 60px;
 }
@@ -196,7 +234,8 @@ main {
 .kone-description {
     padding-top: 47px;
     background-color: #e8e9eb;
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 .kone-description p {
     margin-top: 0;
@@ -296,17 +335,19 @@ form legend {
     width: 447px;
     margin-right: 10px;
 }
-.myinput {
+.left-form-input {
     width: 447px;
     height: 34px;
     margin-bottom: 9px;
     background-color: #e8e9eb;
     padding-left: 15px;
     border: none;
-    box-shadow: 0px 2px 0px 0px rgba(110, 168, 29, 0.75);
-    box-sizing: border-box;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(110, 168, 29, 0.75);
+            box-shadow: 0px 2px 0px 0px rgba(110, 168, 29, 0.75);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
-.mytextarea {
+.right-form-textarea {
     margin-left: 0px;
     width: 548px;
     height: 120px;
@@ -316,20 +357,25 @@ form legend {
     margin-bottom: 20px;
     border: none;
     background-color: #eaebed;
-    box-shadow: 0px 2px 0px 0px rgba(110, 168, 29, 0.75);
-    box-sizing: border-box;
+    -webkit-box-shadow: 0px 2px 0px 0px rgba(110, 168, 29, 0.75);
+            box-shadow: 0px 2px 0px 0px rgba(110, 168, 29, 0.75);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.right-form {
+	text-align: left;
 }
 .check {
-    display: none;
+    visibility: hidden;
 }
 .check + label {
     position: relative;
     cursor: pointer;
-    padding-left: 15px;
+	padding-left: 15px;
 }
 .check + label::before {
     position: absolute;
-    left: -23px;
+    left: -24px;
     top: -17px;
     width: 18px;
     height: 18px;
@@ -342,7 +388,7 @@ form legend {
     content: "";
     position: absolute;
     top: 1px;
-    left: -21px;
+    left: -22px;
     width: 11px;
     height: 6px;
     background: none;
@@ -386,8 +432,13 @@ form legend {
     text-transform: uppercase;
 }
 .sidebar-header {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-right: 30px;
-    box-sizing: border-box;
+}
+.sidebar-header h2 {
+    font-weight: normal;
+    font-size: 27px;
 }
 .sidebar-header::after,
 .sidebar-footer::after {
@@ -453,7 +504,8 @@ form legend {
 }
 .sidebar-footer {
     margin-top: 50px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 .sidebar-footer p {
     margin: 0;
