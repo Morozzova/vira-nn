@@ -32,23 +32,27 @@ header {
     -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
             box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.05);
 }
-.left-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-width: 200px;
-    width: 900px;
-}
 .left-bush {
     min-width: 100px;
     height: 456px;
     background: url("images/header/left_bush.jpg") no-repeat;
 }
-.left-backdrop {
+.backdrop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
     background: url("images/header/backdrop.jpg") repeat-x;
 }
+.right-bush {
+    min-width: 236px;
+    height: 456px;
+    background: url("images/header/right_bush.jpg") no-repeat;
+}
 .header-main {
+    position: absolute;
+    left: 27%;
+    top: 0;
     display: block;
     width: 327px;
 }
@@ -88,21 +92,8 @@ header {
     height: 152px;
     background: url("images/header/lights-reflection.jpg") no-repeat;
 }
-.right-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-}
-.right-backdrop {
-    width: 100%;
-    background: url("images/header/backdrop.jpg") repeat-x;
-}
-.right-bush {
-    min-width: 236px;
-    height: 456px;
-    background: url("images/header/right_bush.jpg") no-repeat;
-}
+
+
 /* главное меню */
 
 .main-menu {
