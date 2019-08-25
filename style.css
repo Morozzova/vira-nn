@@ -162,8 +162,7 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    min-width: 1000px;
-    width: 100%;
+ 
 }
 .main-container {
     display: -webkit-box;
@@ -175,6 +174,7 @@ main {
             flex-direction: column;
     padding-top: 5px;
     margin-bottom: 60px;
+
 }
 .main-container > section {
     padding-left: 60px;
@@ -315,6 +315,7 @@ form legend {
     margin-top: 28px;
     margin-bottom: 30px;
     font-size: 24px;
+    color: #ffffff;
 }
 .form-consult fieldset {
     display: inline-block;
@@ -357,12 +358,12 @@ form legend {
 	text-align: left;
 }
 .check {
-    visibility: hidden;
+    opacity: 0;
 }
 .check + label {
     position: relative;
     cursor: pointer;
-	padding-left: 15px;
+    padding-left: 15px;
 }
 .check + label::before {
     position: absolute;
@@ -374,6 +375,9 @@ form legend {
     border: none;
     content: "";
     margin-top: 15px;
+}
+.check:focus + label::before {
+    outline: rgb(59, 153, 252) auto 2px;
 }
 .check:checked + label::after {
     content: "";
