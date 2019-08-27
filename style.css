@@ -172,6 +172,7 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: calc(100% - 245px);
     padding-top: 5px;
     margin-bottom: 60px;
 
